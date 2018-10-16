@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Koala </title>
+    <link href="favicon-20181012021851139.ico" mce_href="favicon-20181012021851139.ico" rel="bookmark" type="image/x-icon" />
+    <link href="favicon-20181012021851139.ico" mce_href="favicon-20181012021851139.ico" rel="icon" type="image/x-icon" />
+    <link href="favicon-20181012021851139.ico" mce_href="favicon-20181012021851139.ico" rel="shortcut icon" type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/music.js"></script>
+</head>
+<body>
+    <!-- 添加背景音乐 -->
+    <div class="musicDiv">
+        <audio id="music" src="http://sc1.111ttt.com/2016/1/12/10/205100120121.mp3" autoplay="autoplay" loop="loop"></audio>
+    </div>
+  <div class="content model" id="showModel">
+            sorry，简历待上传。。。<i class="fa fa-frown-o" style="color:red;"></i>
+        </div>
+    <!-- 正文 -->
+    <div class="content">
+        <!-- 头像 -->
+        <a class="avatar" id="aTitle" href="#" title="暂停音乐" onclick="playPause()">
+            <img src="images/head02.jpg" alt="头像">
+        </a>
+
+        <!-- 文字简介 -->
+        <div class="username">Koala</div>
+        <div class="desc">H5 前端开发 移动端开发</div>
+        <div class="" style="margin-bottom:20px;">Just do it ！</div>
+  
+        <!-- 外部链接 -->
+        <div class="social">
+            <a title="主页" href="https://github.com/yxiaoshuang" target="_blank">
+                <i class="fa fa-home" aria-hidden="true" style="font-size: 23px;"></i>
+            </a>
+            <a title="简历" href="javascript:void(0)" target="_blank"  id="model">
+              <i class="fa fa-address-card-o" aria-hidden="true"></i>
+            </a>
+            <!-- <a title="微博" href="" target="_blank">
+                <span class="iconfont icon-weibo"></span>
+            </a> -->
+            <!-- <a title="摄影" href="html/photo.html" target="_blank">
+                <span class="iconfont icon-photo"></span>
+            </a> -->
+        </div>
+    
+    </div>
+    <!-- 图片鼠标跟随效果 只需设置跟随图片即可-->
+    <!-- <img src="images/timg.png" id="im" alt="" style="position: absolute;width: 66px;" /> -->
+    <script type="text/javascript">
+        window.onload=function(){
+             var showModel = document.getElementById("showModel");
+           // var imobj = document.getElementById("im");
+           //  document.onmousemove = function (e) {
+           //      imobj.style.left = e.clientX + 25 + "px";
+           //      imobj.style.top = e.clientY + "px";
+           //  }
+            // document.getElementById('model').onclick=function(){
+            //    showModel.style.display="block"; 
+               
+            // } 
+
+           //第二步：点击空白处div消失
+
+             document.onclick=function(){
+                showModel.style.visibility="hidden";
+              }
+
+            //第三步：点击自身div不消失
+
+             document.getElementById('model').onclick=function(e){
+                e.stopPropagation();//阻止事件冒泡
+                 showModel.style.transition="all 1s";
+                showModel.style.visibility="visible";
+            }
+        }
+    </script>
+        
+</body>
+
+</html>
