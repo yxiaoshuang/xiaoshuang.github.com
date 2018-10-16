@@ -1,2 +1,2 @@
 
-# https://yxiaoshuang.github.io/xiaoshuang.github.com/index.html
+# https://yxiaoshuang.github.io/xiaoshuang.github.com
